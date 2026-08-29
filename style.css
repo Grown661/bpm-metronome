@@ -1,0 +1,119 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #14161d;
+  color: #e8eaf0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: min(420px, 92vw);
+  background: #1d2029;
+  border: 1px solid #2c3040;
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+  color: #9aa3b8;
+}
+
+.bpm-display #bpmValue {
+  font-size: 5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.bpm-display .bpm-label {
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  color: #6b7488;
+  margin-top: 4px;
+}
+
+.beat-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 26px 0;
+  min-height: 22px;
+}
+
+.beat-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2c3040;
+  transition: background 0.05s, transform 0.05s;
+}
+
+.beat-dot.active {
+  background: #4f8cff;
+  transform: scale(1.35);
+}
+
+.beat-dot.active.accent {
+  background: #ffb02e;
+}
+
+.controls input[type="range"] {
+  width: 100%;
+  accent-color: #4f8cff;
+  margin-bottom: 18px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.row label { color: #9aa3b8; font-size: 0.9rem; }
+
+select {
+  background: #14161d;
+  color: #e8eaf0;
+  border: 1px solid #2c3040;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1rem;
+}
+
+button {
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: 1px solid #2c3040;
+  border-radius: 10px;
+  background: #262a36;
+  color: #e8eaf0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button:hover { background: #303546; }
+
+button.primary { background: #4f8cff; border-color: #4f8cff; }
+button.primary:hover { background: #3d7bef; }
+button.primary.running { background: #d64550; border-color: #d64550; }
+
+#tapBtn:active { background: #ffb02e; color: #14161d; }
+
+.hint {
+  font-size: 0.82rem;
+  color: #6b7488;
+  line-height: 1.4;
+}

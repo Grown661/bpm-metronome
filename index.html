@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPM Metronom</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <h1>BPM Metronom</h1>
+
+  <section class="bpm-display">
+    <span id="bpmValue">120</span>
+    <span class="bpm-label">BPM</span>
+  </section>
+
+  <section class="beat-indicator" id="beatIndicator" aria-label="Beat-Anzeige"></section>
+
+  <section class="controls">
+    <input type="range" id="bpmSlider" min="40" max="240" value="120" step="1" aria-label="BPM einstellen">
+    <div class="row">
+      <label for="timeSig">Taktart</label>
+      <select id="timeSig">
+        <option value="2">2/4</option>
+        <option value="3">3/4</option>
+        <option value="4" selected>4/4</option>
+      </select>
+    </div>
+    <div class="row buttons">
+      <button id="startStopBtn" class="primary">Start</button>
+      <button id="tapBtn">Tap</button>
+    </div>
+    <p id="tapHint" class="hint">Tippe mehrmals im Takt auf &laquo;Tap&raquo;, um das Tempo zu ermitteln.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
