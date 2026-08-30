@@ -1,5 +1,7 @@
 # BPM Metronom
 
+**Live-Demo:** https://grown661.github.io/bpm-metronome/
+
 Ein Metronom mit Tap-Tempo-Funktion, komplett im Browser — ohne Samples, ohne Libraries. Der Klick wird zur Laufzeit mit der Web Audio API erzeugt (OscillatorNode), das Timing laeuft ueber einen Lookahead-Scheduler statt ueber setInterval-Toene, damit es auch bei Tab-Lag praezise bleibt.
 
 ## Features
